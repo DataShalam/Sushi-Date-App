@@ -36,4 +36,32 @@ yesBtn.addEventListener("click", () => {
 
   noBtn.removeEventListener("touchstart", handleButtonMove);
   noBtn.removeEventListener("mouseover", handleButtonMove);
+
+  //////////////////////////////////////////////////////////////////////////////////
+  const params = new URLSearchParams(window.location.search);
+  console.log("Params:", Object.fromEntries(params.entries())); // For debugging
+
+  const number = params.get("number");
+  const facebook = params.get("facebook");
+  const instagram = params.get("instagram");
+  console.log("Extracted values:", { number, facebook, instagram }); // For debugging
+
+  // Update links dynamically
+  const callLink = document.getElementById("callLink");
+  const smsLink = document.getElementById("smsLink");
+  const facebookLink = document.getElementById("facebookLink");
+  const instagramLink = document.getElementById("instagramLink");
+
+  if (number) {
+    callLink.href = `tel:+${number}`;
+    smsLink.href = `sms:+${number}`;
+  }
+
+  if (facebook) {
+    facebookLink.href = `https://m.me/${facebook}`;
+  }
+
+  if (instagram) {
+    instagramLink.href = `https://ig.me/m/${instagram}`;
+  }
 });

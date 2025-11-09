@@ -18,16 +18,23 @@
       <div class="additional-info">
         <h3>Contact me here:</h3>
         <div class="icons">
-          <a href="tel:+NUMBER"
+          <a id="callLink" href="tel:+NUMBER"
             ><ion-icon class="icon" name="call-outline"></ion-icon
           ></a>
-          <a href="sms:+NUMBER">
+          <a id="smsLink" href="sms:+NUMBER">
             <ion-icon class="icon" name="logo-wechat"></ion-icon>
           </a>
-          <a href="https://m.me/FACEBOOK-USERNAME" target="_blank">
+          <a
+            id="facebookLink"
+            href="https://m.me/FACEBOOK-USERNAME"
+            target="_blank"
+          >
             <ion-icon class="icon" name="logo-facebook"></ion-icon>
           </a>
-          <a href="https://ig.me/m/INSTAGRAM-USERNAME" target="_blank"
+          <a
+            id="instagramLink"
+            href="https://ig.me/m/INSTAGRAM-USERNAME"
+            target="_blank"
             ><ion-icon class="icon" name="logo-instagram"></ion-icon
           ></a>
         </div>
@@ -37,7 +44,8 @@
         <button id="no-btn">No</button>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/urlReader.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
